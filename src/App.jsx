@@ -4,12 +4,20 @@ import { useEffect, useState } from "react";
 import { Header } from "./components/Header";
 import Config from "./config";
 import { TextInput } from "./components/TextInput";
+import { LoginPage } from "./components/LoginPage";
+import { Profile } from "./components/Profile";
 function App() {
     const [count, setCount] = useState(0);
 
     return (
         <>
-            <Header title={Config.title}></Header>
+            <Profile
+                name={"John"}
+                email={"2O0ZU@example.com"}
+                phone={"123-456-7890"}
+            ></Profile>
+            {/* <LoginPage></LoginPage> */}
+            {/* <Header title={Config.title}></Header>
             <TextInput label={"Enter your name:"} />
             <div>
                 <Button
@@ -18,7 +26,7 @@ function App() {
                 >
                     cline
                 </Button>
-            </div>
+            </div> */}
         </>
     );
 }
